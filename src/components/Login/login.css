@@ -1,0 +1,15 @@
+.login,.auth{
+    padding: 0 50px;
+    width: 400px;
+    margin: 0 auto 50px auto;
+}
+.login input,.auth input{
+    margin:10px 0;
+}
+#auth,.success{
+    display: block;
+    width: 300px;
+    margin: 0 auto;
+    color: lightseagreen;
+    font-size: 26px;
+}

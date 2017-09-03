@@ -1,0 +1,30 @@
+import React, { Component } from 'react';
+import $ from 'jquery'
+import './selectFilm.css'
+export class SelectFilm extends Component {
+  render() {
+    let {film,actions} = this.props
+    let {name,year,id} = film
+    return (
+
+        <div className="selectFilm">
+          <div className="center">
+            <div className="content">
+              <img src="/img/film.jpg" alt=""/>
+              <div className="property">
+                <span>{name}</span>
+                <span>{year}</span>
+              </div>
+              <div>This film is very good! Because ....mmmm i dont know.... :P </div>
+              <div className="row select-footer">
+                <button className="btn btn-link" onClick={()=>$(".selectFilm").toggleClass('open')}>back</button>
+                <button className="btn btn-primary btn-sm" onClick={()=>actions.toRent(id)}>rent</button>
+              </div>
+              <div className="rent-result"></div>
+            </div>
+          </div>
+        </div>
+    );
+  }
+}
+

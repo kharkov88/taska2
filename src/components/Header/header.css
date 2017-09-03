@@ -1,0 +1,41 @@
+.App-header {
+  position: relative;
+  text-align: center;
+  background-color: #222;
+  height: 140px;
+  padding: 20px;
+  color: white;
+}
+.App-header>h4{
+  color: lightsalmon;
+  font-size: 12px;
+}
+.header-menu{
+    margin: 0 auto;
+    padding: 0;
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+.header-menu a{
+  display: inline-block;
+  padding: 5px;
+}
+.header-menu a.disabled {
+    pointer-events: none; /* делаем ссылку некликабельной */
+    cursor: default;  /* устанавливаем курсор в виде стрелки */
+    color: #999; /* цвет текста для нективной ссылки */
+}
+.header-menu a:hover{
+  cursor: pointer;
+  color: yellow;
+}
+
+.App-header .loader{
+  display: none;
+  position: absolute;
+  bottom: -100%;
+  left: 50%;
+  z-index: 1000;
+}
