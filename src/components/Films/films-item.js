@@ -13,6 +13,7 @@ export class Item extends Component {
     let {item,actions} = this.props
     let {name,year,added_at,genres} = item
     let str_genres ='';
+    if(genres!==null)
     genres.map((item,index)=>{
         index==0?str_genres+=`${item.name}`:str_genres+=`,${item.name}`
     })

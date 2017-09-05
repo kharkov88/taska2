@@ -12,7 +12,7 @@ export class App extends Component {
         <ConnectHeader/>
         <section className="App-content">
           <Route exact path='/films' component={ConnectFilms}/>
-          <Route exact path='/rented' component={()=><p>'rented'</p>}/>
+          <Route exact path='/rented' component={()=><p>'Upsss...'</p>}/>
           <Route exact path='/add-film' component={ConnectAddFilm}/>
           <Route exact path='/login' component={ConnectLogin}/>
           {/* <Route exact path='/film/*' component={ConnectSelectFilm}/> */}

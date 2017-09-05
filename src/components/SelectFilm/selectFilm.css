@@ -1,6 +1,6 @@
 .selectFilm{
     display: none;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -36,4 +36,5 @@
     height: 22px;
     line-height: 10px;
     margin: 10px 0;
+    outline: none;
 }

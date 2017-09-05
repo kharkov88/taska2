@@ -3,7 +3,7 @@ import $ from 'jquery'
 import './selectFilm.css'
 export class SelectFilm extends Component {
   render() {
-    let {film,actions} = this.props
+    let {logged_in,film,actions} = this.props
     let {name,year,id} = film
     return (
 
@@ -18,7 +18,7 @@ export class SelectFilm extends Component {
               <div>This film is very good! Because ....mmmm i dont know.... :P </div>
               <div className="row select-footer">
                 <button className="btn btn-link" onClick={()=>$(".selectFilm").toggleClass('open')}>back</button>
-                <button className="btn btn-primary btn-sm" onClick={()=>actions.toRent(id)}>rent</button>
+                <button disabled={!logged_in} className="btn btn-primary btn-sm" onClick={()=>actions.toRent(id)}>rent</button>
               </div>
               <div className="rent-result"></div>
             </div>

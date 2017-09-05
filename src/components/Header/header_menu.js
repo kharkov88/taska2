@@ -7,7 +7,7 @@ export class Item extends Component {
     let activity = logged_in==false?'disabled':''
     return (
         <li className="header-menu-item" >
-            <Link className={'activity'} to={children.trim().replace(' ','-')} onClick={onclick} >{children}</Link>
+            <Link className={activity} to={children.trim().replace(' ','-')} onClick={onclick} >{children}</Link>
         </li>
     );
   }

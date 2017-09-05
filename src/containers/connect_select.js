@@ -10,7 +10,8 @@ const mapDispatchToProps = function (dispatch){
 }
 const mapStateToProps = function (state){ 
     return {
-        film:state.selectFilm
+        film:state.selectFilm,
+        logged_in:state.logged_in
     }
 }
 
