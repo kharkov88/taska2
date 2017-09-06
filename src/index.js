@@ -12,14 +12,15 @@ import './index.css';
 import {App} from './App';
 import reducer from'./redux/reducer'
 
-import {helloSaga} from './redux/sagas.js'
+import {watchFetchFilms,rootSaga} from './redux/sagas.js'
 const logger = createLogger();
 const saga  = createSagaMid();
 const history=createBrowserHistory();
 const store = createStore(
-    reducer,applyMiddleware(thunk,saga)
+    reducer,applyMiddleware(thunk,logger,saga)
 )
-saga.run(helloSaga)
+saga.run(rootSaga)
+
 
 ReactDOM.render(
     <Router history={history}>

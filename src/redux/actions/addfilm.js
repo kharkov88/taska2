@@ -1,8 +1,6 @@
-import {fetching} from '../actions'
-
 export function addFilm(name,year,genres){
     return (dispatch,state)=>{
-        dispatch(fetching())
+        dispatch({type:'SEND_FETCH'})
         fetch('https://film-api-go.herokuapp.com/api/v1/film',
         {
             method:'post',
@@ -17,7 +15,7 @@ export function addFilm(name,year,genres){
             response.json().then(data=>{
                 if(response.status==200)
                 document.getElementsByClassName('add-result')[0].innerHTML = 'Success!'
-                dispatch(fetching())
+                dispatch({type:'SEND_FETCH'})
             })
         })
     }   

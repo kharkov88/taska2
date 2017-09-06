@@ -1,8 +1,6 @@
-import {fetching} from '../actions'
-
 export function auth(obj_auth){
     return dispatch=>{
-        dispatch(fetching())
+        dispatch({type:'SEND_FETCH'})
         fetch('https://film-api-go.herokuapp.com/auth',{
             method:'post',
              headers:{"Content-type": 'application/json; charset=utf-8'},
@@ -19,7 +17,7 @@ export function auth(obj_auth){
                 if(response.status!==200)
                 document.getElementById('auth').innerHTML = data.error
                 else document.getElementById('auth').innerHTML = "Succes! Try Login..."
-                dispatch(fetching())
+                    dispatch({type:'SEND_FETCH'})
             })
         })       
     }

@@ -1,15 +1,6 @@
 import * as cnt from'./const'
-export * from './actions/toRent'
-export * from './actions/login'
-export * from './actions/addfilm'
-export * from './actions/auth'
+export * from './actions/'
 
-export function update(data){
-    return{
-        type:cnt.UPDATE_FILMS,
-        result:data.result
-    }
-}
 export function setToken(token){
     return{
         type:cnt.SET_TOKEN,
@@ -39,16 +30,9 @@ export function fetching(){
     }
 }
 
-export function getFilms(){
-    return (dispatch)=>{
-        dispatch(fetching())
-        fetch('https://film-api-go.herokuapp.com/api/v1/film')
-        .then(response=>{
-            response.json().then(data=>{
-                console.log(data)
-                dispatch(update(data))
-                dispatch(fetching())
-            })
-        })
+// try redux-saga middlaware
+export function getFilms2(){
+    return{
+        type:'FETCH_FILMS_REQUEST'
     }
-}
+} 

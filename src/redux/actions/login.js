@@ -1,8 +1,6 @@
-import {set_logged,setToken, fetching} from '../actions'
-
 export function login(user,pass){
     return dispatch=>{
-        dispatch(fetching())
+        dispatch({type:'SEND_FETCH'})
         fetch('https://film-api-go.herokuapp.com/login',{
             method:'post',
             headers:{"Content-type": 'application/json; charset=utf-8'},
@@ -11,19 +9,18 @@ export function login(user,pass){
                 password:pass
             })
         })
-        .then(response=>{
-            
+        .then(response=>{ 
             response.json()
                 .then(data=>{
                     if(response.status==200){
-                        dispatch(setToken(data.token));
-                        dispatch(set_logged())
+                        dispatch({type:'SET_TOKEN',token:data.token});
+                        dispatch({type:'SET_LOGGED'});
                         document.getElementsByClassName('success')[0].innerHTML =
                      `Success!`
                     }
                     else document.getElementsByClassName('success')[0].innerHTML =
                      `Server eror ${response.status}: ${data.error}`
-                    dispatch(fetching())
+                    dispatch({type:'SEND_FETCH'})
                 })
             })       
     }
