@@ -6,6 +6,9 @@ import {ConnectHeader,ConnectFilms,ConnectLogin,
 import './App.css';
 
 export class App extends Component {
+  componentWillUpdate(){
+    //console.log('App wiil update')
+  }
   render() {
     return (
       <div className="App">

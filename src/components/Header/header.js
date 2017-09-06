@@ -14,10 +14,10 @@ export class Header extends Component {
           <h2>Welcome to base of good films!</h2>
           <h4>* For renting and adding movies, you need to log in</h4>
           <ul className="header-menu">
-            <Item onclick={actions.getFilms}>films</Item>
+            <Item onclick={actions.getFilms} logged_in={true}>films</Item>
             <Item onclick={actions.getRents} logged_in={logged_in}>rented</Item>
             <Item logged_in={logged_in}>add film</Item>
-            <Item>login</Item>
+            <Item logged_in={true}>login</Item>
           </ul>
         </div>
     );
