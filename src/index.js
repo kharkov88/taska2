@@ -4,20 +4,22 @@ import {Router}from'react-router'
 import createBrowserHistory from"history/createBrowserHistory"
 import registerServiceWorker from './registerServiceWorker';
 import {createStore,applyMiddleware} from 'redux';
+import createSagaMid from 'redux-saga'
 import {Provider} from 'react-redux'
 import {createLogger} from 'redux-logger'
 import thunk from'redux-thunk'
 import './index.css';
 import {App} from './App';
-//import {ConnectApp} from './containers'
 import reducer from'./redux/reducer'
 
-import {getFilms,login,auth,rent} from './redux/actions'
-
+import {helloSaga} from './redux/sagas.js'
 const logger = createLogger();
-const store = createStore(reducer,applyMiddleware(thunk,logger))
+const saga  = createSagaMid();
 const history=createBrowserHistory();
-
+const store = createStore(
+    reducer,applyMiddleware(thunk,saga)
+)
+saga.run(helloSaga)
 
 ReactDOM.render(
     <Router history={history}>

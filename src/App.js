@@ -1,14 +1,10 @@
 import React, { Component } from 'react';
 import {Route}from'react-router'
-import {Header,Films,Login} from './components'
 import {ConnectHeader,ConnectFilms,ConnectLogin,
         ConnectSelectFilm,ConnectAddFilm} from './containers'
 import './App.css';
 
 export class App extends Component {
-  componentWillUpdate(){
-    //console.log('App wiil update')
-  }
   render() {
     return (
       <div className="App">
@@ -26,4 +22,3 @@ export class App extends Component {
   }
 }
 
-//export default App;
