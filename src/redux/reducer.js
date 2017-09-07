@@ -1,5 +1,5 @@
 import {combineReducers} from 'redux';
-import {films,token,rentedFilm,selectFilm} from'./reducers'
+import {films,token,rentedFilm,selectFilm,basketOfFilms} from'./reducers'
 
 export default combineReducers (
     {
@@ -8,7 +8,8 @@ export default combineReducers (
         rentedFilm,
         selectFilm,
         logged_in,
-        fetching
+        fetching,
+        basketOfFilms
     }
 )
 

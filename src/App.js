@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import {Route}from'react-router'
+import {Basket} from'./components'
 import {ConnectHeader,ConnectFilms,ConnectLogin,
-        ConnectSelectFilm,ConnectAddFilm} from './containers'
+        ConnectSelectFilm,ConnectAddFilm,ConnectBasket} from './containers'
 import './App.css';
 
 export class App extends Component {
@@ -16,6 +17,7 @@ export class App extends Component {
           <Route exact path='/login' component={ConnectLogin}/>
           {/* <Route exact path='/film/*' component={ConnectSelectFilm}/> */}
           <ConnectSelectFilm/>
+          <ConnectBasket/>
         </section>
       </div>
     );

@@ -29,7 +29,24 @@ export function fetching(){
         type:cnt.SEND_FETCH
     }
 }
-
+export function addToBascket(film){
+    return{
+        type: 'BUY_FILM',
+        film
+    }
+}
+export function incrementItem(id){
+    return{
+        type:'INCREMENT',
+        id
+    }
+}
+export function decrementItem(id){
+    return{
+        type:'DECREMENT',
+        id
+    }
+}
 // try redux-saga middlaware
 export function getFilms2(){
     return{

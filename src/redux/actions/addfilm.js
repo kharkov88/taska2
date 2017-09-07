@@ -14,7 +14,7 @@ export function addFilm(name,year,genres){
         .then(response=>{
             response.json().then(data=>{
                 if(response.status==200)
-                document.getElementsByClassName('add-result')[0].innerHTML = 'Success!'
+                document.getElementsByClassName('add-result')[0].innerHTML = 'Done!'
                 dispatch({type:'SEND_FETCH'})
             })
         })

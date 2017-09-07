@@ -11,8 +11,16 @@ export class Login extends Component {
             <span className="success">Login</span>
             <div className="row" style={{display:visible}}>
                 <div className="login">
-                    <input type="text" className="form-control" ref={input=>user=input} placeholder="Login"/>
-                    <input type="text" className="form-control" ref={input=>pass=input} placeholder="Password"/>
+                    <div className="input-group">
+                        <span className="input-group-addon"><i className="fa fa-user fa-fw"></i></span>
+                        <input type="text" className="form-control" ref={input=>user=input} placeholder="Login"/>
+                    </div>
+                    
+                    <div className="input-group">
+                        <span className="input-group-addon"><i className="fa fa-key fa-fw"></i></span>
+                        <input type="text" className="form-control" ref={input=>pass=input} placeholder="Password"/>
+                    </div>
+                    
                     <button onClick={()=>actions.login(user.value,pass.value)}>login</button>    
                 </div>
             </div>

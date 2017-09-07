@@ -19,6 +19,7 @@ export class SelectFilm extends Component {
               <div className="row select-footer">
                 <button className="btn btn-link" onClick={()=>$(".selectFilm").toggleClass('open')}>back</button>
                 <button disabled={!logged_in} className="btn btn-primary btn-sm" onClick={()=>actions.toRent(id)}>rent</button>
+                <button className="btn btn-primary btn-sm" onClick={()=>actions.addToBascket(film)}>buy</button>
               </div>
               <div className="rent-result"></div>
             </div>
