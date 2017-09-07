@@ -27,11 +27,26 @@ export class Login extends Component {
             <div className="row" style={{display:visible}}>
                 <span id="auth">Registration</span>
                 <div className="auth">
-                    <input ref={input=>reg_name=input} type="text" className="form-control" placeholder="username"/>
-                    <input ref={input=>reg_pass=input} type="text" className="form-control" placeholder="password"/>
-                    <input ref={input=>reg_login=input} type="text" className="form-control" placeholder="login"/>
-                    <input ref={input=>reg_age=input} type="text" className="form-control" placeholder="age"/>
-                    <input ref={input=>reg_tel=input} type="text" className="form-control" placeholder="telephone"/>
+                    <div className="input-group">
+                        <span className="input-group-addon"><i className="fa fa-user-o fa-fw"></i></span>
+                        <input ref={input=>reg_name=input} type="text" className="form-control" placeholder="username"/>
+                    </div>
+                    <div className="input-group">
+                        <span className="input-group-addon"><i className="fa fa-key  fa-fw"></i></span>
+                        <input ref={input=>reg_pass=input} type="text" className="form-control" placeholder="password"/>
+                    </div>
+                    <div className="input-group">
+                        <span className="input-group-addon"><i className="fa fa-user-o fa-fw"></i></span>
+                        <input ref={input=>reg_login=input} type="text" className="form-control" placeholder="login"/>
+                    </div>
+                    <div className="input-group">
+                        <span className="input-group-addon"><i className="fa fa-user-secret fa-fw"></i></span>
+                        <input ref={input=>reg_age=input} type="text" className="form-control" placeholder="age"/>
+                    </div>
+                    <div className="input-group">
+                        <span className="input-group-addon"><i className="fa fa-phone fa-fw"></i></span>
+                        <input ref={input=>reg_tel=input} type="text" className="form-control" placeholder="telephone"/>
+                    </div>
                     <button onClick={()=>{
                              let obj_auth={
                                     username:reg_name.value,

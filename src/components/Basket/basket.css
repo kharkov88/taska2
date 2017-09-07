@@ -1,7 +1,7 @@
 .app-basket{
     position: absolute;
     right: 10px;
-    top: 10px;
+    top: 20px;
     color: #fff;
     border: 0px solid #fff;
     width: 100px;
@@ -14,7 +14,7 @@
 }
 .app-basket-count{
     display: inline-block;
-    font-size: 32px;
+    font-size: 30px;
     margin:0 0 0 10px;
 }
 .baskets-list{

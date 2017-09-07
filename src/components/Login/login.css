@@ -3,7 +3,7 @@
     width: 400px;
     margin: 0 auto 50px auto;
 }
-.login .input-group,.auth input{
+.login .input-group,.auth .input-group{
     margin:15px 0;
 }
 #auth,.success{
@@ -16,11 +16,16 @@
 }
 .login button, .auth button{
     display: block;
-    color: #fff;
-    background-color: lightseagreen;
-    border:0;
+    background-color: #fff;
+    color: lightseagreen;
+    border: 1px solid lightseagreen;
     border-radius: 2px;
     width: 50px;
     margin: 0 auto;
     outline: none;
+}
+.login button:hover, .auth button:hover{
+    color: #fff;
+    background-color: lightseagreen;
+    border:1px solid lightseagreen;
 }

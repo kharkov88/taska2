@@ -22,6 +22,9 @@
     margin: 0;
     padding: 0;
 }
+.listBasketsClose:hover{
+    color: red;
+}
 .row-item>div{
     text-align: center;
 }

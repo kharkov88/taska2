@@ -6,6 +6,10 @@
   padding: 20px;
   color: white;
 }
+.App-header>h2{
+  margin: 0;
+  font-size: 34px;
+}
 .App-header>h4{
   color: lightsalmon;
   font-size: 12px;
@@ -38,4 +42,14 @@
   bottom: -200%;
   left: 50%;
   z-index: 1000;
+}
+.App-header .src{
+  position: absolute;
+  bottom: 20px;
+  right: 45px;
+  font-size: 12px;
+}
+.src i{
+  font-size: 14px;
+  margin: 0 5px 0 0 ;
 }
