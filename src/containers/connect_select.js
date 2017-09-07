@@ -11,7 +11,8 @@ const mapDispatchToProps = function (dispatch){
 const mapStateToProps = function (state){ 
     return {
         film:state.selectFilm,
-        logged_in:state.logged_in
+        logged_in:state.logged_in,
+        inBasket:state.selectFilm.inBasket
     }
 }
 

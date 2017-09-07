@@ -18,6 +18,8 @@ export function basketOfFilms(state=[],action){
             if(item.film.id===action.id&&item.count!==1) --item.count
             return  item
         })
+        case 'DELETE_ITEM':
+        return state.filter(item=>item.film.id!==action.id)
         default: return state;
     }
 }

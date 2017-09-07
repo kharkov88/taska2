@@ -31,10 +31,11 @@ export function fetching(){
 }
 export function addToBascket(film){
     return{
-        type: 'BUY_FILM',
+        type: 'CLICK_BUY_FILM',
         film
     }
 }
+
 export function incrementItem(id){
     return{
         type:'INCREMENT',
@@ -44,6 +45,12 @@ export function incrementItem(id){
 export function decrementItem(id){
     return{
         type:'DECREMENT',
+        id
+    }
+}
+export function deleteItemFromCart(id){
+    return{
+        type:'DELETE_ITEM_FROM_CART',
         id
     }
 }

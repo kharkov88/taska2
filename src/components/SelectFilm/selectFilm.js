@@ -4,7 +4,7 @@ import './selectFilm.css'
 export class SelectFilm extends Component {
   render() {
     let {logged_in,film,actions} = this.props
-    let {name,year,id} = film
+    let {name,year,id,inBasket} = film
     return (
 
         <div className="selectFilm">
@@ -19,7 +19,7 @@ export class SelectFilm extends Component {
               <div className="row select-footer">
                 <button className="btn btn-link" onClick={()=>$(".selectFilm").toggleClass('open')}>back</button>
                 <button disabled={!logged_in} className="btn btn-primary btn-sm" onClick={()=>actions.toRent(id)}>rent</button>
-                <button className="btn btn-primary btn-sm" onClick={()=>actions.addToBascket(film)}>buy</button>
+                <button className="btn btn-primary btn-sm" disabled={inBasket} onClick={()=>actions.addToBascket(film,film.id)}>buy</button>
               </div>
               <div className="rent-result"></div>
             </div>
