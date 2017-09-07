@@ -3,8 +3,8 @@
     width: 400px;
     margin: 0 auto 50px auto;
 }
-.login input,.auth input{
-    margin:0;
+.login .input-group,.auth input{
+    margin:15px 0;
 }
 #auth,.success{
     display: block;
@@ -12,4 +12,15 @@
     margin: 0 auto;
     color: lightseagreen;
     font-size: 26px;
+    text-align: center;
+}
+.login button, .auth button{
+    display: block;
+    color: #fff;
+    background-color: lightseagreen;
+    border:0;
+    border-radius: 2px;
+    width: 50px;
+    margin: 0 auto;
+    outline: none;
 }
