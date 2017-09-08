@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import $ from 'jquery'
 import './contactUs.css'
 
 export class ContactUs extends Component {
@@ -6,7 +7,7 @@ export class ContactUs extends Component {
       let name,email,msg
       let{actions} =this.props
     return (
-        <div>
+        <div className="contact-us">
             <span className="success">Get-in-touch</span>
             <div className="row">
                 <div className="login">
@@ -30,7 +31,7 @@ export class ContactUs extends Component {
 }
 
 function cors(name,email,msg){
-    let url = 'http://e-coding.club/php/order.php'
+    let url = 'https://e-coding.club/php/order.php'
     if(name.trim()!==0&&email.trim()!==0&&msg.length!=0){
         fetch(url,{
         method:'post',
@@ -43,7 +44,7 @@ function cors(name,email,msg){
         })
         .then(function(res){
             return res.text()
-                .then(text=>console.log(text))
+                .then(text=>$('.contact-us').html('<span class="success">Success!</span>'))
         })
     }
   }
