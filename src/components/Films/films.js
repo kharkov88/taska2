@@ -11,7 +11,7 @@ export class Films extends Component {
         <div className="films">
             <div className="row films-header">
                 <div className="col-md-3">Name</div>
-                <div className="col-md-1">Year</div>
+                <div className="col-md-2">Year</div>
                 <div className="col-md-4">Gender</div>
                 <div className="col-md-3">Added</div>
                 <hr/>

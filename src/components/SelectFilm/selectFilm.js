@@ -9,7 +9,7 @@ export class SelectFilm extends Component {
 
         <div className="selectFilm">
           <div className="center">
-          <i className="fa fa-times fa-3x selectClose" onClick={()=>$(".selectFilm").toggleClass('open')} aria-hidden="true"></i>
+          <i className="fa fa-times fa-2x selectClose" onClick={()=>$(".selectFilm").toggleClass('open')} aria-hidden="true"></i>
             <div className="content">
               <img src="/img/film.jpg" alt=""/>
               <div className="property">

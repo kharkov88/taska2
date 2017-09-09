@@ -1,3 +1,7 @@
+1. npm i
+2. npm run start
+
+
 Завдання написати SPA клієнт для цього [API](https://github.com/lempiy/Film_API). 
 Задеплоєна версія АПІ доступна за урл `https://film-api-go.herokuapp.com/`. В даний момент доступні наступні ендпоінти.
 

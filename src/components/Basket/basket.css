@@ -1,4 +1,5 @@
 .app-basket{
+    display: none;
     position: absolute;
     right: 10px;
     top: 20px;
@@ -6,9 +7,10 @@
     border: 0px solid #fff;
     width: 100px;
     height: 50px;
-    display: flex;
 }
-
+.basketVis{
+    display: block;
+}
 .app-basket:hover{
     cursor: pointer;
 }

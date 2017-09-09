@@ -11,11 +11,26 @@ footer{
     z-index: 100;
 }
 .footer-contact{
+    position: relative;
     width: 100px;
     margin: auto;
     display: flex;
     justify-content: space-between;
+
 }.footer-contact>i:hover{
     color: #fff;
     cursor: pointer;
+    transition: ease .5s;
+}
+#hover-contact{
+    position: absolute;
+    display: inline-block;
+    width: 200px;
+    text-align: center;
+    top: -20px;
+    left: 50%;
+    margin: 0 0 0 -100px;
+    color: lightseagreen;
+    background-color: #fff;
+    font-weight: bold;
 }

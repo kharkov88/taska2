@@ -20,9 +20,15 @@
     color: lightseagreen;
     font-weight: bold;
 }
+.films-header>div{
+    padding: 0 0 0 50px;
+}
 .film-item{
     color: black;
     border:1px solid #fff;
+}
+.film-item>div{
+    padding: 0 0 0 50px;
 }
 
 .film-item:hover{

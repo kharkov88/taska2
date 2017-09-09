@@ -19,6 +19,8 @@
     padding: 10px 0;
 }
 .listBaskets-head h1{
+    font-size: 26px;
+    color: lightseagreen;
     margin: 0;
     padding: 0;
 }
@@ -36,9 +38,13 @@
     font-weight: bold;
 }
 .item-delete i{
-    float: right;
-    margin: 0 20px 0  0;
+    color: lightseagreen;
 }
 .fa-plus, .fa-minus{
     cursor: pointer;
+}
+.row-footer>div{
+    color: lightslategray;
+    font-weight: bold;
+    text-align: center;
 }

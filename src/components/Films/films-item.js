@@ -25,7 +25,7 @@ export class Item extends Component {
             actions.chooseFilm(item)}}>
             <div className="row film-item">      
                 <div className="col-md-3">{name}</div>             
-                <div className="col-md-1">{year}</div>
+                <div className="col-md-2">{year}</div>
                 <div className="col-md-4">{str_genres}</div>
                 <div className="col-md-3">{added_at.substr(0,10)}</div>         
             </div>
