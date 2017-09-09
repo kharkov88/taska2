@@ -9,7 +9,7 @@ export class AddFilm extends Component {
         <div>
             <div className="row">
                 <div className="movie">
-                    <span className="title">New movie:</span>
+                    <span className="title">What movie did you watch?</span>
                     <input type="text" className="form-control" ref={input=>name=input} placeholder="Name"/>
                     <input type="text" className="form-control" ref={input=>year=input} placeholder="Year"/>
                     <div className="genres">
@@ -17,7 +17,7 @@ export class AddFilm extends Component {
                             <input ref={input=>ge_comedy=input}type="checkbox" value="1"/>Comedy <br/>
                             <input ref={input=>ge_horror=input}type="checkbox" value="2"/>Horror <br/>
                     </div>
-                    <button onClick={()=>{
+                    <button className="movie-send" onClick={()=>{
                         ge_drama.checked&&genres.push(+ge_drama.value)
                         ge_comedy.checked&&genres.push(+ge_comedy.value)
                         ge_horror.checked&&genres.push(+ge_horror.value)
@@ -27,7 +27,7 @@ export class AddFilm extends Component {
                         genres=[]
                         name.value=year.value=''
                         }}>add</button>  
-                    <span className="add-result"></span>  
+                    <div className="add-result"></div>  
                 </div>
             </div>      
         </div>

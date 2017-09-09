@@ -39,9 +39,11 @@
 .App-header .loader{
   display: none;
   position: absolute;
-  bottom: -200%;
+  bottom: -50px;
   left: 50%;
+  margin: 0 0 0 -27px;
   z-index: 1000;
+  color: lightseagreen;
 }
 .App-header .src{
   position: absolute;

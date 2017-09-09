@@ -1,17 +1,43 @@
 .movie{
     width: 300px;
     margin: 0 auto;
+    color: lightseagreen;
 }
 .movie .title{
     color: lightseagreen;
-    font-size: 26px;
+    font-size: 22px;
+    display: block;
+    width: 90%;
+    text-align: center;
+    margin: 10px auto;
 }
-
-.movie input{
+.genres{
+    font-weight: bold;
+}
+.genres>input[type=checkbox]{
+    margin: 0 5px 0 0 ;
+}
+.movie >input{
     margin: 10px 0 ;
+}
+.movie-send{
+    display: block;
+    background-color: #fff;
+    color: lightseagreen;
+    border: 1px solid lightseagreen;
+    border-radius: 2px;
+    width: 50px;
+    margin: 10px auto;
+    outline: none;
+}
+.movie-send:hover{
+    color: #fff;
+    background-color: lightseagreen;
+    border: 1px solid lightseagreen;
 }
 .add-result{
     margin: 0 25px;
     color: lightseagreen;
     font-size: 26px;
+    text-align: center;
 }

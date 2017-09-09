@@ -1,5 +1,6 @@
 export function login(user,pass){
     return dispatch=>{
+        let result = document.getElementsByClassName('success')[0]
         dispatch({type:'SEND_FETCH'})
         fetch('https://film-api-go.herokuapp.com/login',{
             method:'post',
@@ -15,11 +16,9 @@ export function login(user,pass){
                     if(response.status==200){
                         dispatch({type:'SET_TOKEN',token:data.token});
                         dispatch({type:'SET_LOGGED'});
-                        document.getElementsByClassName('success')[0].innerHTML =
-                     `Success!`
+                        result.innerHTML = `Success!`
                     }
-                    else document.getElementsByClassName('success')[0].innerHTML =
-                     `Server eror ${response.status}: ${data.error}`
+                    else result.innerHTML = `${data.error}`
                     dispatch({type:'SEND_FETCH'})
                 })
             })       

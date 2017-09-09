@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {Route}from'react-router'
-import {ContactUs} from'./components'
+import {ContactUs,Footer} from'./components'
 import {ConnectHeader,ConnectFilms,ConnectLogin,
         ConnectSelectFilm,ConnectAddFilm,ConnectBasket,
       ConnectContactUs} from './containers'
@@ -18,9 +18,10 @@ export class App extends Component {
           <Route exact path='/login' component={ConnectLogin}/>
           <Route exact path='/contact-us' component={ConnectContactUs}/>
           {/* <Route exact path='/film/*' component={ConnectSelectFilm}/> */}
-          <ConnectSelectFilm/>
-          <ConnectBasket/>
         </section>
+        <ConnectSelectFilm/>
+        <ConnectBasket/>
+        <Footer/>
       </div>
     );
   }

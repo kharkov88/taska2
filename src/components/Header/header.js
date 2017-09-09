@@ -11,7 +11,7 @@ export class Header extends Component {
         <div className="App-header">
           <div className="src"><a href="https://github.com/kharkov88/taska2" target="blank"><i className="fa fa-github" aria-hidden="true"></i>source code</a></div>
           <div className="loader" id="loader" style={{display:visible}}>
-            <img src="img/loader.gif" />
+          <i className="fa fa-cog fa-spin fa-3x fa-fw"></i>
           </div>
           <h2>Welcome to base of good films!</h2>
           <h4>* For renting and adding movies, you need to log in</h4>
