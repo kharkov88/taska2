@@ -6,6 +6,27 @@
   padding: 20px;
   color: white;
 }
+.lefts-spin{
+  position: absolute;
+  top: 10px;
+  left: 100px;
+  opacity: .1;
+}
+.one-spin{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+.two-spin{
+  position: absolute;
+  top: 60px;
+  left: 40px;
+}
+.three-spin{
+  position: absolute;
+  top: 50px;
+  left: 65px;
+}
 .App-header>h2{
   margin: 0;
   font-size: 34px;

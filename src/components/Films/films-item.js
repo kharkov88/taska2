@@ -19,17 +19,17 @@ export class Item extends Component {
     })
     let link = name.toLowerCase().trim().replace(/\s/ig, '-')
     return (
-        <Link to={`film/${link}`} onClick={(e)=>{
+        <div className="row film-item" onClick={(e)=>{
             e.preventDefault()
             this.handleClick();
             actions.chooseFilm(item)}}>
-            <div className="row film-item">      
+                
                 <div className="col-md-3">{name}</div>             
                 <div className="col-md-2">{year}</div>
                 <div className="col-md-4">{str_genres}</div>
                 <div className="col-md-3">{added_at.substr(0,10)}</div>         
-            </div>
-        </Link>
+            
+        </div>
     );
   }
 }

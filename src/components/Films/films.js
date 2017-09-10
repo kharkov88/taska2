@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import cn from 'classnames'
 import $ from 'jquery'
 import './films.css'
 import {Item} from './films-item'
@@ -6,9 +7,9 @@ import {Item} from './films-item'
 export class Films extends Component {
   render() {
     let {logged_in,films,actions} = this.props
-    let visible = logged_in?'block':'none'
+    let visible = films.length>0?'block':'none'
     return (
-        <div className="films">
+        <div className="films" style={{display:visible}}>
             <div className="row films-header">
                 <div className="col-md-3">Name</div>
                 <div className="col-md-2">Year</div>

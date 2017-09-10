@@ -9,7 +9,15 @@ export class Header extends Component {
     let visible = fetching?'block':'none'
     return (
         <div className="App-header">
-          <div className="src"><a href="https://github.com/kharkov88/taska2" target="blank"><i className="fa fa-github" aria-hidden="true"></i>source code</a></div>
+          <div className="lefts-spin">
+            <i className="fa fa-cog fa-spin fa-4x fa-fw one-spin"></i>
+            <i className="fa fa-cog fa-spin fa-2x fa-fw two-spin"></i>
+            <i className="fa fa-cog fa-spin fa-1x fa-fw three-spin"></i>
+          </div>
+          <div className="src">
+              <a href="https://github.com/kharkov88/taska2" target="blank">
+              <i className="fa fa-github" aria-hidden="true"></i>source code</a>
+          </div>
           <div className="loader" id="loader" style={{display:visible}}>
           <i className="fa fa-cog fa-spin fa-3x fa-fw"></i>
           </div>

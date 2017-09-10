@@ -9,6 +9,7 @@ footer{
     display: flex;
     color: grey;
     z-index: 100;
+    margin: 15px 0 0 0;
 }
 .footer-contact{
     position: relative;
@@ -31,6 +32,5 @@ footer{
     left: 50%;
     margin: 0 0 0 -100px;
     color: lightseagreen;
-    background-color: #fff;
     font-weight: bold;
 }
