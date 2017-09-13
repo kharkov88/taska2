@@ -45,3 +45,11 @@
     margin: 10px 20px 0 0;
     color: black;
 }
+.selectClose:hover{
+    transform: rotate(90deg);
+    transition: ease .5s;
+    color: lightseagreen;
+}
+.fa-shopping-basket{
+    cursor: pointer;
+}

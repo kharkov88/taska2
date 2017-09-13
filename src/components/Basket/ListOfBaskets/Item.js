@@ -13,7 +13,7 @@ export class Item extends Component {
                 <span className="count-item">{item.count}</span>
                 <i className="fa fa-plus" aria-hidden="true" onClick={()=>actions.incrementItem(item.film.id)}></i>
                 </div>
-                <div className="col-md-2"><span>{50*item.count+'$'}</span></div>
+                <div className="col-md-2"><span>{(item.price*item.count).toString().substr(0,7)+' $'}</span></div>
                 <div className="col-md-2 item-delete" onClick={()=>actions.deleteItemFromCart(item.film.id)}><i className="fa fa-trash-o fa-1x" aria-hidden="true"></i></div> 
             </div>
             <hr/>

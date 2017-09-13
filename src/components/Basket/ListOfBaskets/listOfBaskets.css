@@ -25,7 +25,9 @@
     padding: 0;
 }
 .listBasketsClose:hover{
-    color: red;
+    transform: rotate(90deg);
+    transition: ease .5s;
+    color: lightseagreen;
 }
 .row-item>div{
     text-align: center;

@@ -11,7 +11,7 @@ export class ListOfBaskets extends Component {
         }
     }
   render() {
-      let total=0;
+    let total=0;
     let {films,actions} = this.props
     return (
         <div className="app-listBaskets"> 
@@ -22,7 +22,7 @@ export class ListOfBaskets extends Component {
             <hr/>
             {
                 films.map((item,index)=>{
-                    total+=item.count*50
+                    total+=item.count*item.price
                     return <Item item={item} key={index} actions={actions}/>
                 })
             }

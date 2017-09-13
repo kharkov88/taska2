@@ -7,7 +7,7 @@ export class SelectFilm extends Component {
     let {name,year,id,inBasket} = film
     return (
 
-        <div className="selectFilm">
+        <div className="selectFilm" onClick={(e)=>clickOne(e)}>
           <div className="center">
           <i className="fa fa-times fa-2x selectClose" onClick={()=>$(".selectFilm").toggleClass('open')} aria-hidden="true"></i>
             <div className="content">
@@ -21,6 +21,7 @@ export class SelectFilm extends Component {
                 <button className="btn btn-link" onClick={()=>$(".selectFilm").toggleClass('open')}>back</button>
                 <button disabled={!logged_in} className="btn btn-primary btn-sm" onClick={()=>actions.toRent(id)}>rent</button>
                 <button className="btn btn-primary btn-sm" disabled={inBasket} onClick={()=>actions.addToBascket(film,film.id)}>buy</button>
+                <i className="fa fa-shopping-basket" aria-hidden="true" onClick={()=>$('.baskets-list').toggleClass('closed')}></i>
               </div>
               <div className="rent-result"></div>
             </div>
@@ -30,3 +31,8 @@ export class SelectFilm extends Component {
   }
 }
 
+let clickOne = (e)=>{
+  let container = $(".selectFilm");
+  if (container.has(e.target).length === 0){
+      container.toggleClass('open')}
+}

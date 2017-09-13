@@ -5,6 +5,7 @@ export function basketOfFilms(state=[],action){
             ...state,
             {
                 count:1,
+                price: Math.floor(Math.random()*100)||35,
                 film:action.film
             }
         ]||[]

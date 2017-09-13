@@ -3,7 +3,8 @@ import './login.css'
 
 export class Login extends Component {
   render() {
-    let user,pass,reg_name='',reg_pass='',reg_login='',reg_age='',reg_tel=''
+    let user,pass,reg_name='',reg_pass='',reg_login='',reg_age='',reg_tel='',
+        defUser = window.localStorage.user||'Login'
     let {logged_in,actions} = this.props
     let visible = logged_in?'none':'block'
     return (
@@ -13,7 +14,7 @@ export class Login extends Component {
                 <div className="login">
                     <div className="input-group">
                         <span className="input-group-addon"><i className="fa fa-user fa-fw"></i></span>
-                        <input type="text" className="form-control" ref={input=>user=input} placeholder="Login"/>
+                        <input type="text" className="form-control" ref={input=>user=input} placeholder={defUser}/>
                     </div>
                     
                     <div className="input-group">
@@ -21,7 +22,7 @@ export class Login extends Component {
                         <input type="text" className="form-control" ref={input=>pass=input} placeholder="Password"/>
                     </div>
                     
-                    <button onClick={()=>actions.login(user.value,pass.value)}>login</button>    
+                    <button onClick={()=>actions.login(user.value||defUser,pass.value)}>login</button>    
                 </div>
             </div>
             <div className="row" style={{display:visible}}>
@@ -29,7 +30,7 @@ export class Login extends Component {
                 <div className="auth">
                     <div className="input-group">
                         <span className="input-group-addon"><i className="fa fa-user-o fa-fw"></i></span>
-                        <input ref={input=>reg_name=input} type="text" className="form-control" placeholder="username"/>
+                        <input ref={input=>reg_name=input} type="text" className="form-control" placeholder="username" />
                     </div>
                     <div className="input-group">
                         <span className="input-group-addon"><i className="fa fa-key  fa-fw"></i></span>
